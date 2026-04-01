@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why You're Amazing 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💖 You're My Everything 💖</h1>
+        
+        <div class="message-card">
+            <h2>✨ Reasons I Love You ✨</h2>
+            <p><strong>1.</strong> Your laugh makes my whole day brighter 🌞</p>
+            <p><strong>2.</strong> You always know exactly what to say 💬</p>
+            <p><strong>3.</strong> You're the BEST adventure buddy 🗺️</p>
+            <p><strong>4.</strong> Your hugs are pure magic 🤗</p>
+            <p><strong>5.</strong> You make every moment special 🎈</p>
+        </div>
+
+        <div style="margin: 40px 0;">
+            <div class="gift">🎁</div>
+            <p class="subtitle">Ready for more birthday magic? ✨</p>
+        </div>
+
+        <a href="page3.html" class="btn">🎁 Next Surprise 🎁</a>
+        <a href="index.html" class="btn" style="background: linear-gradient(45deg, #a8e6cf, #88d8a3);">← Back</a>
+    </div>
+
+    <button class="nav-btn" onclick="window.location.href='page3.html'">→</button>
+
+    <script>
+        // Same heart animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
