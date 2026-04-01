@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Quiz 🎯</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ✨ FLOATING -->
+    <div class="floating-magic" id="floatingMagic"></div>
+
+    <!-- 🎵 MUSIC -->
+    <div class="music-glitter">
+        <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+        <audio id="birthdayMusic" loop>
+            <source src="./birthday.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="container">
+
+        <h1 class="hero-title">🎯 Birthday Quiz 🎯</h1>
+
+        <p class="subtitle">
+            How well do you know your bestie? 💖
+        </p>
+
+        <!-- 📊 PROGRESS -->
+        <div class="progress-bar">
+            <div id="quizProgress" class="progress-fill"></div>
+        </div>
+
+        <!-- ❓ QUIZ BOX -->
+        <div class="cute-box">
+
+            <h2 id="questionText">Question</h2>
+
+            <div id="options"></div>
+
+            <button id="nextBtn" class="btn" onclick="nextQuestion()" style="display:none;">
+                Next →
+            </button>
+
+        </div>
+
+        <!-- 🚀 NAV -->
+        <div class="btn-grid">
+            <a href="./page4.html" class="btn btn-gold">← Back</a>
+            <a href="./index.html" class="btn">🏠 Home</a>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
