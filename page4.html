@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Magic 🧠</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ✨ FLOATING -->
+    <div class="floating-magic" id="floatingMagic"></div>
+
+    <!-- 🎵 MUSIC -->
+    <div class="music-glitter">
+        <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+        <audio id="birthdayMusic" loop>
+            <source src="./birthday.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="container">
+
+        <h1 class="hero-title">🧠 Memory Magic 🧠</h1>
+
+        <p class="subtitle">
+            Click the hearts in correct order 💖 (1 → 2 → 3 → 4)
+        </p>
+
+        <!-- 🎀 GAME BOX -->
+        <div class="cute-box">
+
+            <div class="memory-game">
+
+                <span class="memory-heart" data-order="1">💖</span>
+                <span class="memory-heart" data-order="2">🌟</span>
+                <span class="memory-heart" data-order="3">🎂</span>
+                <span class="memory-heart" data-order="4">👯‍♀️</span>
+
+            </div>
+
+            <p id="gameMessage" class="main-text">
+                Click in order: 1️⃣ → 2️⃣ → 3️⃣ → 4️⃣
+            </p>
+
+            <button class="btn" onclick="resetGame()">🔄 Play Again</button>
+
+        </div>
+
+        <!-- 🚀 NAV -->
+        <div class="btn-grid">
+            <a href="./page3.html" class="btn btn-gold">← Back</a>
+            <a href="./page5.html" class="btn">Next →</a>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
