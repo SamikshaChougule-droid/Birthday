@@ -3,62 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday [FRIEND'S NAME]! 🎉</title>
+    <title>Happy Birthday [NAME]! 🎉💖</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Floating Background -->
-    <div class="floating-bg" id="floatingBg"></div>
-    
-    <!-- Music Player -->
-    <div class="music-player">
-        <button onclick="toggleMusic()">🎵 Play Music</button>
-        <audio id="bgMusic" loop>
+    <div class="music-control">
+        <button class="music-btn" onclick="toggleMusic()">
+            <i class="fas fa-music"></i> Party Music
+        </button>
+        <audio id="birthdayMusic" loop preload="auto">
             <source src="birthday.mp3" type="audio/mpeg">
         </audio>
     </div>
 
     <div class="container">
-        <h1 class="hero-title">Happy Birthday<br><span style="color: var(--gold); font-size: 0.7em;">[YOUR BEST FRIEND'S NAME]</span>! 🎉</h1>
+        <h1 class="hero-title">
+            Happy Birthday<br>
+            <span style="font-size: 0.65em; display: block;">[YOUR BEST FRIEND'S NAME]!</span>
+        </h1>
         
-        <div style="font-size: 1.5rem; color: white; margin: 30px 0; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
-            🎂 You're officially more fabulous today! 🥳
+        <p class="subtitle">
+            🎉 Today the world got even more fabulous because YOU were born! 🎉
+        </p>
+
+        <div style="font-size: 5rem; margin: 40px 0; animation: bounce 2s infinite;">
+            <i class="fas fa-birthday-cake"></i> 🎂 <i class="fas fa-gift"></i>
         </div>
 
-        <div style="font-size: 4rem; margin: 30px 0; animation: bounce 2s infinite;">
-            🎂✨🎁
+        <div class="btn-grid">
+            <a href="page2.html" class="btn">
+                <i class="fas fa-heart"></i> Love Letter
+            </a>
+            <a href="page3.html" class="btn btn-secondary">
+                <i class="fas fa-images"></i> Photo Memories
+            </a>
+            <a href="page4.html" class="btn">
+                <i class="fas fa-star"></i> Birthday Wish
+            </a>
         </div>
 
-        <div>
-            <a href="page2.html" class="btn">💌 Open Love Letter</a>
-            <a href="#custom" class="btn" onclick="showCustomMsg()">💝 Your Special Message</a>
-        </div>
-
-        <!-- Custom Message Section -->
-        <div class="custom-msg" id="customMsg" style="display: none;">
-            <h2>💕 YOUR BESTIE'S MESSAGE 💕</h2>
-            <textarea id="friendMsg" placeholder="Type your super cute birthday message here... 
-I love you because...
-You're my favorite person because...
-My favorite memory with you is...
-I wish for you... 💖">Hey bestie! 
-
-You're not just my best friend, you're my SISTER FROM ANOTHER MISTER! 🥰
-
-I love how you always make me laugh even on my worst days, how you remember the tiniest details about me, and how you're ALWAYS there when I need you most.
-
-This year, I wish you ALL the happiness, ALL the adventures, and ALL the cake you can eat! 🎂
-
-I love you MORE THAN PIZZA (and that's saying something)! 
-
-Forever your ride-or-die, 
-[YOUR NAME] 💕💕💕</textarea>
-            <br>
-            <button class="btn" onclick="saveMessage()" style="margin-top: 20px; padding: 15px 35px;">💾 Save & Continue</button>
-        </div>
+        <footer>
+            <p>Made with <i class="fas fa-heart" style="color: var(--hot-pink);"></i> by your bestie!</p>
+        </footer>
     </div>
 
-    <button class="nav-btn" onclick="window.scrollTo(0,0)">🏠</button>
+    <div class="page-nav">
+        <button class="nav-btn nav-home" onclick="window.location.href='index.html'">
+            <i class="fas fa-home"></i>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>
