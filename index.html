@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Arpita! 🎉💖✨</title>
 
-    <!-- ✅ FIXED CSS PATH -->
+    <!-- ✅ FIXED PATH -->
     <link rel="stylesheet" href="./style.css">
 
     <!-- Icons -->
@@ -14,16 +14,16 @@
 
 <body>
 
-    <!-- ✨ FLOATING ELEMENTS -->
-    <div class="floating-elements" id="floatingElements"></div>
+    <!-- ✅ FIXED ID (IMPORTANT) -->
+    <div class="floating-magic" id="floatingMagic"></div>
 
-    <!-- 🎵 MUSIC PLAYER -->
-    <div class="music-control">
+    <!-- 🎵 MUSIC -->
+    <div class="music-glitter">
         <button class="music-btn" onclick="toggleMusic()">
             <i class="fas fa-music"></i> 🎵 Party Started!
         </button>
 
-        <audio id="birthdayMusic" loop preload="auto">
+        <audio id="birthdayMusic" loop>
             <source src="./birthday.mp3" type="audio/mpeg">
         </audio>
     </div>
@@ -32,7 +32,7 @@
 
         <h1 class="hero-title">
             Happy Birthday<br>
-            <span class="arpita-name">ARPITA</span>!
+            <span class="arpita-name">ARPITA</span>
         </h1>
 
         <p class="subtitle">
@@ -41,17 +41,21 @@
 
         <!-- 🎀 MAIN BOX -->
         <div class="cute-box">
-            <div class="emoji-box">
+
+            <!-- ✅ replaced inline style -->
+            <div class="big-emoji">
                 🎂✨🎁💖🥳
             </div>
 
             <p class="main-text">
                 5 Magical Surprises waiting for you, Arpita! Click to explore your birthday wonderland! 🌟
             </p>
+
         </div>
 
         <!-- 🚀 BUTTONS -->
         <div class="btn-grid">
+
             <a href="./page2.html" class="btn">
                 <i class="fas fa-heart"></i><br>Love Letter 💌
             </a>
@@ -65,12 +69,14 @@
             </a>
 
             <a href="./page5.html" class="btn btn-gold">
-                <i class="fas fa-gamepad"></i><br>Quiz 🎮
+                <i class="fas fa-gamepad"></i><br>Quiz Adventure 🎮
             </a>
+
         </div>
 
-        <!-- 💌 MESSAGE BOX -->
+        <!-- 💌 MESSAGE -->
         <div class="custom-love-msg">
+
             <h3>💌 Arpita's Special Message 💌</h3>
 
             <textarea id="arpitaMsg">
@@ -86,17 +92,18 @@ Happy Birthday 🎂💕
             <button class="btn" onclick="saveArpitaMsg()">
                 💾 Save My Love Note
             </button>
+
         </div>
 
         <footer>
             <p>
-                Made with ❤️ for Arpita 🥰 | 2026
+                Made with ❤️ for Arpita 🥰
             </p>
         </footer>
 
     </div>
 
-    <!-- ✅ FIXED JS PATH -->
+    <!-- ✅ JS -->
     <script src="./script.js"></script>
 
 </body>
