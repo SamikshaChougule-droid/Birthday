@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Arpita....!!!! 🎉💖</title>
+    <title>Happy Birthday Arpita! 🎉💖✨</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="music-control">
-        <button class="music-btn" onclick="toggleMusic()">
-            <i class="fas fa-music"></i> Party Music
+    <!-- ✨ 200+ FLOATING HEARTS & SPARKLES -->
+    <div class="floating-magic" id="floatingMagic"></div>
+
+    <!-- 🎵 GLITTERY MUSIC PLAYER -->
+    <div class="music-glitter">
+        <button class="music-btn" onclick="toggleMusic()" style="width: 100%; padding: 20px; font-size: 1.3rem;">
+            <i class="fas fa-music"></i> 🎵 Party Started!
         </button>
         <audio id="birthdayMusic" loop preload="auto">
             <source src="birthday.mp3" type="audio/mpeg">
@@ -20,38 +24,72 @@
     <div class="container">
         <h1 class="hero-title">
             Happy Birthday<br>
-            <span style="font-size: 0.65em; display: block;">Arpita..!!!❤</span>
+            <span class="arpita-name">ARPITA</span>!
         </h1>
         
-        <p class="subtitle">
-            🎉 Today the world got even more fabulous because YOU were born! 🎉
+        <p style="font-size: clamp(1.6rem, 5vw, 2.5rem); color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5); margin-bottom: 50px; animation: fadeInUp 2s ease-out;">
+            🎉 My soul sister, my sparkle, my EVERYTHING! Today we celebrate YOU! 🥳💖
         </p>
 
-        <div style="font-size: 5rem; margin: 40px 0; animation: bounce 2s infinite;">
-            <i class="fas fa-birthday-cake"></i> 🎂 <i class="fas fa-gift"></i>
+        <!-- 🎀 MAIN CUTE BOX -->
+        <div class="cute-box">
+            <div style="font-size: 8rem; margin: 50px 0; animation: megaBounce 3s infinite;">
+                🎂✨🎁💖🥳
+            </div>
+            <p style="font-size: 2rem; color: var(--pink-love); margin-bottom: 60px; font-weight: 900; font-family: 'Dancing Script', cursive;">
+                5 Magical Surprises waiting for you, Arpita! Click to explore your birthday wonderland! 🌟
+            </p>
         </div>
 
-        <div class="btn-grid">
-            <a href="page2.html" class="btn">
-                <i class="fas fa-heart"></i> Love Letter
+        <!-- 🚀 BUTTONS GRID -->
+        <div class="btn-grid" style="gap: 30px;">
+            <a href="page2.html" class="btn" style="padding: 25px 60px; font-size: 1.5rem;">
+                <i class="fas fa-heart"></i><br>Love Letter 💌
             </a>
-            <a href="page3.html" class="btn btn-secondary">
-                <i class="fas fa-images"></i> Photo Memories
+            <a href="page3.html" class="btn btn-gold" style="padding: 25px 60px; font-size: 1.5rem;">
+                <i class="fas fa-camera"></i><br>Upload Photos 📸
             </a>
-            <a href="page4.html" class="btn">
-                <i class="fas fa-star"></i> Birthday Wish
+            <a href="page4.html" class="btn" style="padding: 25px 60px; font-size: 1.5rem;">
+                <i class="fas fa-star"></i><br>Memory Magic 🧠
+            </a>
+            <a href="page5.html" class="btn btn-gold" style="padding: 25px 60px; font-size: 1.5rem;">
+                <i class="fas fa-gamepad"></i><br>Quiz Adventure 🎮
             </a>
         </div>
 
-        <footer>
-            <p>Made with <i class="fas fa-heart" style="color: var(--hot-pink);"></i> by your bestie!</p>
+        <!-- 💕 CUSTOM MESSAGE FOR ARPITA -->
+        <div class="custom-love-msg">
+            <h3 style="color: var(--pink-love); font-size: 2.2rem; margin-bottom: 30px; font-family: 'Dancing Script', cursive;">
+                💌 Arpita's Special Message 💌
+            </h3>
+            <textarea id="arpitaMsg" placeholder="Write something super cute for Arpita... 💕
+Arpita, you're my...
+My favorite memory with you is...
+I wish for you this year...
+Love, [Your Name] 💖">Dearest Arpita 💖,
+
+You're not just my best friend, you're my SUNSHINE, my SPARKLE, my EVERYTHING! 🌟 
+Every moment with you feels like magic ✨
+
+This birthday, I wish you:
+🎂 Endless cake & happiness
+💕 Love that fills your heart
+🌟 Dreams that all come true
+👑 The confidence of a queen!
+
+I love you MORE THAN CHOCOLATE (and you know that's HUGE)! 😍
+Forever your soul sister,
+[YOUR NAME] 💕💕💕</textarea>
+            <br><br>
+            <button class="btn" onclick="saveArpitaMsg()" style="padding: 20px 50px; font-size: 1.3rem;">
+                💾 Save My Love Note
+            </button>
+        </div>
+
+        <footer style="margin-top: 100px; font-size: 1.4rem;">
+            <p>Made with <i class="fas fa-heart" style="color: var(--pink-love); font-size: 2rem; animation: heartbeat 1s infinite;"></i> 
+            ∞ love for my Arpita! 🥰 | 2024</p>
         </footer>
-    </div>
-
-    <div class="page-nav">
-        <button class="nav-btn nav-home" onclick="window.location.href='index.html'">
-            <i class="fas fa-home"></i>
-        </button>
     </div>
 
     <script src="script.js"></script>
