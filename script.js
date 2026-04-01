@@ -1,56 +1,40 @@
-// Global variables
-let musicPlaying = false;
-
-// Initialize floating elements
-function initFloatingBg() {
-    const floatingBg = document.getElementById('floatingBg');
-    const elements = ['❤️', '💖', '💕', '⭐', '✨', '🎈', '🎉'];
+// ✨ Initialize 200+ floating hearts & sparkles
+function initFloatingMagic() {
+    const container = document.getElementById('floatingMagic');
+    const hearts = ['💖','💕','💝','💗','🩷','💓','💞'];
+    const sparkles = ['✨','⭐','🌟','💫','🌈','🎇'];
     
+    // Hearts every 200ms
     setInterval(() => {
-        const elem = document.createElement('div');
-        const randomEl = elements[Math.floor(Math.random() * elements.length)];
-        elem.textContent = randomEl;
-        elem.className = `heart-float ${randomEl === '⭐' ? 'star-float' : randomEl.includes('🎈') ? 'balloon-float' : 'heart-float'}`;
-        elem.style.left = Math.random() * 100 + 'vw';
-        elem.style.fontSize = (Math.random() * 20 + 20) + 'px';
-        elem.style.animationDuration = (Math.random() * 5 + 6) + 's';
-        floatingBg.appendChild(elem);
-        
-        setTimeout(() => elem.remove(), 9000);
-    }, 800);
-}
-
-// Confetti explosion
-function launchConfetti() {
-    for(let i = 0; i < 100; i++) {
-        const confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.backgroundColor = ['#ff6b9d', '#ffd93d', '#a8e6cf', '#ff9ff3'][Math.floor(Math.random() * 4)];
-        confetti.style.animationDelay = Math.random() * 0.5 + 's';
-        confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
-        document.body.appendChild(confetti);
-        
-        setTimeout(() => confetti.remove(), 4000);
-    }
+        const heart = document.createElement('div');
+        heart.className = 'heart-float';
+        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 4 + 8) + 's';
+        container.appendChild(heart);
+        setTimeout(() => heart.remove(), 12000);
+    }, 200);
+    
+    // Sparkles every 500ms
+    setInterval(() => {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.innerHTML = sparkles[Math.floor(Math.random() * sparkles.length)];
+        sparkle.style.left = Math.random() * 100 + 'vw';
+        sparkle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        container.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 8000);
+    }, 500);
 }
 
 // Music control
+let musicPlaying = false;
 function toggleMusic() {
-    const music = document.getElementById('bgMusic');
-    if (!musicPlaying) {
-        music.play();
-        musicPlaying = true;
+    const music = document.getElementById('birthdayMusic');
+    musicPlaying = !musicPlaying;
+    if (musicPlaying) {
+        music.play().catch(e => console.log('Music autoplay blocked'));
+        event.target.innerHTML = '<i class="fas fa-volume-up"></i> 🎵 Party ON!';
     } else {
         music.pause();
-        musicPlaying = false;
-    }
-}
-
-// Custom message functions
-function showCustomMsg() {
-    document.getElementById('customMsg').style.display = 'block';
-    document.getElementById('customMsg').scrollIntoView({ behavior: 'smooth' });
-}
-
-function save
+        event.target.innerHTML = '<i class="fas fa-music"></i> 🎵
