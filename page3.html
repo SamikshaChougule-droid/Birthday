@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories Together 🥰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-bg" id="floatingBg"></div>
+    
+    <div class="music-player">
+        <button onclick="toggleMusic()">🎵 Music</button>
+        <audio id="bgMusic" loop>
+            <source src="birthday.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="container">
+        <h1 class="hero-title">📸 Our Beautiful Memories 📸</h1>
+        
+        <p style="color: white; font-size: 1.3rem; margin-bottom: 40px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+            Every moment with you is my favorite memory 💕
+        </p>
+
+        <div class="photo-gallery">
+            <!-- ADD YOUR PHOTOS HERE! Just replace the src -->
+            <div class="photo-card">
+                <img src="photos/photo1.jpg" alt="Our first adventure!">
+                <div class="photo-overlay">
+                    <h3>🎢 Our First Adventure!</h3>
+                    <p>That day we got lost but found the best memories 🥰</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="photos/photo2.jpg" alt="Best foodie day">
+                <div class="photo-overlay">
+                    <h3>🍕 Best Foodie Day Ever!</h3>
+                    <p>Calories don't count when you're with your bestie! 😋</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="photos/photo3.jpg" alt="Silly moments">
+                <div class="photo-overlay">
+                    <h3>😂 Silly Moments</h3>
+                    <p>You always know how to make me laugh! 🤪</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <a href="page4.html" class="btn">🌟 Final Birthday Wish</a>
+            <a href="page2.html" class="btn" style="background: linear-gradient(45deg, #ffd93d, #ff9a9e);">← Back</a>
+        </div>
+    </div>
+
+    <button class="nav-btn" onclick="window.location.href='page4.html'">✨</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
