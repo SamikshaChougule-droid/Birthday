@@ -1,10 +1,12 @@
-/* 🌈 GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&family=Satisfy&display=swap');
 
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* VARIABLES */
+/* 🌈 COLORS */
 :root {
     --pink-magic: #ff69b4;
     --pink-dream: #ffb6c1;
@@ -14,25 +16,148 @@
     --mint-bubble: #98fb98;
     --white-cloud: rgba(255,255,255,0.97);
     --pink-glow: rgba(255,105,180,0.6);
+    --sparkle-gold: rgba(255,215,0,0.8);
 }
 
-/* BODY */
+/* 🌈 BACKGROUND */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(-45deg, var(--pink-dream), var(--pink-magic), var(--pink-love), var(--purple-fairy));
-    background-size: 600% 600%;
-    animation: rainbowDream 20s ease infinite;
+    background-size: 400% 400%;
+    animation: rainbowDream 15s ease infinite;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-/* BACKGROUND ANIMATION */
+/* 🌈 BG ANIMATION */
 @keyframes rainbowDream {
     0%,100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
 }
 
-/* ✨ FLOATING */
+/* 📦 MAIN CONTAINER (FIXED) */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🎀 TITLE FIX */
+.hero-title {
+    font-family: 'Satisfy', cursive;
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* ✨ NAME */
+.arpita-name {
+    display: block;
+    font-size: 0.8em;
+    color: #ffd700;
+}
+
+/* 💬 SUBTITLE */
+.subtitle {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* 🎁 BOX FIX */
+.cute-box {
+    background: var(--white-cloud);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* 🎉 BIG EMOJI */
+.big-emoji {
+    font-size: 5rem;
+    margin: 20px 0;
+}
+
+/* 💬 MAIN TEXT */
+.main-text {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* 🚀 BUTTON GRID FIX */
+.btn-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 🔘 BUTTON */
+.btn {
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, var(--pink-magic), var(--pink-love));
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* 💛 GOLD BUTTON */
+.btn-gold {
+    background: linear-gradient(45deg, var(--gold-sparkle), orange);
+    color: black;
+}
+
+/* 💌 MESSAGE BOX FIX */
+.custom-love-msg {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+/* ✍ TEXTAREA */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid pink;
+    font-size: 1rem;
+}
+
+/* 🎵 MUSIC BUTTON FIX */
+.music-glitter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.music-btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+/* 💖 FLOATING HEARTS FIX */
 .floating-magic {
     position: fixed;
     width: 100%;
@@ -43,167 +168,34 @@ body {
 /* ❤️ HEART */
 .heart-float {
     position: absolute;
-    font-size: 20px;
-    animation: floatUp 10s linear infinite;
+    font-size: 18px;
+    animation: float 10s linear infinite;
 }
 
-@keyframes floatUp {
-    from { transform: translateY(100vh); opacity: 1; }
-    to { transform: translateY(-100px); opacity: 0; }
+/* ✨ ANIMATION */
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
 }
 
-/* ✨ SPARKLE */
-.sparkle {
-    position: absolute;
-    font-size: 12px;
-    animation: floatUp 8s linear infinite;
-}
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
 
-/* 📦 CONTAINER */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
+    .cute-box {
+        padding: 20px;
+    }
 
-/* 🌟 TITLE */
-.hero-title {
-    font-family: 'Satisfy', cursive;
-    font-size: clamp(3rem, 10vw, 6rem);
-    color: white;
-    margin-bottom: 20px;
-}
-
-/* 💖 SUBTITLE */
-.subtitle {
-    font-size: 1.3rem;
-    color: white;
-    margin-bottom: 30px;
-}
-
-/* 🎀 BOX */
-.cute-box {
-    background: var(--white-cloud);
-    border-radius: 30px;
-    padding: 40px;
-    margin: 30px 0;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-}
-
-/* 🔘 BUTTONS */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 30px;
-    background: linear-gradient(45deg, var(--pink-magic), var(--pink-love));
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-}
-
-/* GRID */
-.btn-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* 🎵 MUSIC */
-.music-control {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-}
-
-.music-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background: var(--pink-love);
-    color: white;
-    cursor: pointer;
-}
-
-/* 📸 PHOTO */
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.photo-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.photo-card img {
-    width: 100%;
-    display: block;
-}
-
-.photo-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    width: 100%;
-    padding: 15px;
-}
-
-/* 💌 MESSAGE */
-.custom-love-msg textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 15px;
-    border: none;
-}
-
-/* 🎯 QUIZ */
-.quiz-option {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.quiz-option.selected {
-    background: gold;
-}
-
-/* 🎉 CONFETTI */
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background: red;
-    animation: fall 4s linear;
-}
-
-@keyframes fall {
-    from { transform: translateY(-100px); }
-    to { transform: translateY(100vh); }
-}
-
-/* 🔘 NAV BUTTON */
-.nav-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 50%;
-    background: var(--pink-love);
-    color: white;
-    border: none;
-    cursor: pointer;
+    .big-emoji {
+        font-size: 3rem;
+    }
 }
