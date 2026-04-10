@@ -199,3 +199,112 @@ textarea {
         font-size: 3rem;
     }
 }
+/* ============================= */
+/* 📸 PHOTO GALLERY UPGRADE */
+/* ============================= */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* 💖 PHOTO CARD */
+.photo-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: 0.4s ease;
+}
+
+/* ✨ IMAGE */
+.photo-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+/* 💕 HOVER MAGIC */
+.photo-card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 40px var(--pink-glow);
+}
+
+.photo-card:hover img {
+    transform: scale(1.1);
+}
+
+/* 💌 OVERLAY TEXT */
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color: white;
+    opacity: 0;
+    transition: 0.4s ease;
+    text-align: left;
+}
+
+.photo-overlay h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+.photo-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* SHOW TEXT ON HOVER */
+.photo-card:hover .photo-overlay {
+    opacity: 1;
+}
+
+/* ============================= */
+/* 💖 EXTRA CUTE TEXT EFFECT */
+/* ============================= */
+
+.container p {
+    transition: 0.3s;
+}
+
+.container p:hover {
+    color: var(--pink-love);
+    transform: scale(1.02);
+}
+
+/* ============================= */
+/* ✨ BUTTON GLOW EFFECT */
+/* ============================= */
+
+.btn {
+    box-shadow: 0 5px 15px var(--pink-glow);
+}
+
+.btn:hover {
+    box-shadow: 0 10px 25px var(--pink-glow);
+}
+
+/* ============================= */
+/* 💫 HEART SPARKLE EFFECT */
+/* ============================= */
+
+.heart-float {
+    color: pink;
+    animation: float 8s linear infinite;
+    opacity: 0.7;
+}
+
+/* ============================= */
+/* 🌸 SOFT SCROLL FEEL */
+/* ============================= */
+
+html {
+    scroll-behavior: smooth;
+}
